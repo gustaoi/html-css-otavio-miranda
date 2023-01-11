@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semântica em Elementos</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 1.5em;
+
+            margin: 0px;
+        }
+
+        ul {
+            list-style: none;
+
+            display: inline-flex;
+
+            justify-content: space-between;
+        }
+
+        li {
+            margin-left: 25px;
+        }
+
+        nav {
+            color: white;
+
+            background-color: rgb(110, 110, 110);
+
+            margin: 0px;
+
+            display: flex;
+
+            justify-content: space-around;
+        }
+
+        nav  a {
+            text-decoration: none;
+
+            color: white;
+        }
+
+        header {
+            padding: 15px;
+
+            background-color: coral;
+
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+
+            margin: auto;
+            
+            flex-direction: column;
+
+            justify-content: space-evenly;
+        }
+
+        div#sec {
+            display: flex;
+
+            justify-content: space-between;
+        }
+
+        section {
+            width: 500px;
+
+            margin: auto;
+            text-align: justify;
+        }
+        
+        section#s2 {
+            
+            text-align: justify;
+        }
+
+        article {
+            margin: auto;
+
+            width: 700px;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: rgb(49, 49, 49);
+
+            color: white;
+
+            display: flex;
+
+            justify-content: space-around;
+            
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <p>
+            barra de navegação dentro de uma (nav)
+        </p>
+
+        <ul>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>
+            Aprendendo Semântica (isso é um header)
+        </h1>
+    </header>
+
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#">links da pag numa (aside)</a></li>
+                <li><a href="#">section 1</a></li>
+                <li><a href="#">section 2</a></li>
+                <li><a href="#">article 1</a></li>
+                <li><a href="#f">footer</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <div id="sec">
+            <section>
+                <h2>
+                    duas section dentro de um (main) / section 1
+                </h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid aliquam at aspernatur, sit placeat. Ducimus reprehenderit veniam amet ut, consequuntur temporibus modi quidem quam beatae non pariatur accusamus quod. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum reprehenderit expedita veniam id, rerum et repudiandae! Nobis repellendus accusantium ut pariatur aliquid vitae iusto, obcaecati neque labore atque! Ipsam, quisquam?
+                </p>
+            </section>
+            <section id="s2">
+                <h2>
+                    section 2
+                </h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores aliquid aliquam at aspernatur, sit placeat. Ducimus reprehenderit veniam amet ut, consequuntur temporibus modi quidem quam beatae non pariatur accusamus quod. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum reprehenderit expedita veniam id, rerum et repudiandae! Nobis repellendus accusantium ut pariatur aliquid vitae iusto, obcaecati neque labore atque! Ipsam, quisquam?
+                </p>
+            </section>
+        </div>
+
+        <article>
+            <h3>
+                Um artigo(article) com um h3
+            </h3>
+
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos sint quo voluptatibus commodi facilis modi incidunt explicabo, eos aspernatur voluptates, itaque numquam voluptate quasi laboriosam officia dicta eum, nulla suscipit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eaque voluptatem quibusdam illo voluptate quo delectus eum sit obcaecati mollitia modi reprehenderit, nobis natus quia harum sint quis odit iusto.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloribus mollitia eum ut, excepturi similique quos deserunt, ipsam quas fugiat eos omnis, voluptatem a. Maiores quia neque voluptatibus voluptate? Dicta.
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        Rodapé <address>Endereço aqui no (address)</address>
+    </footer>
+</body>
+</html>
