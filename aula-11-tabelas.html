@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        * {
+            margin-top: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            font-size: 1.3rem;
+
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+
+            border-radius: 20px;
+
+            width: 50vw;
+
+            
+
+            text-align: center;
+
+            margin: auto;
+        }
+
+        table caption {
+            caption-side: bottom;
+
+            text-align: right;
+
+            font-size: .8em;
+
+            font-style: italic;
+
+            margin-top: 5px;
+        }
+
+        thead {
+            background-color: darkgray;
+        }
+
+        table td, table th {
+            border: 1px solid black;
+
+            padding: 10px;
+        }
+
+        tfoot {
+            background-color: lightgray;
+        }
+
+        table.responsive-table {
+            width: 1000px;
+
+            max-width: 150%;
+
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1> 
+        Criando Tabelas
+    </h1>
+
+<!--Tabelas-->
+    <table>
+    <!--caption - Legenda da tabela-->
+        <caption>Exemplo de Tabelas (caption)</caption>
+
+    <!--thead - Cabeça da tabela-->
+        <thead>
+        <!--tr - Linha(row) da tabela-->
+            <tr>
+            <!--th - Titulo da linha(row)-->
+                <th>
+                    Titulo 1
+                </th>
+
+                <th>
+                    Titulo 2
+                </th>
+
+                <th>
+                    Titulo 3
+                </th>
+            </tr>
+        </thead>
+
+    <!--tbody - Corpo da tabela-->
+        <tbody>
+            <tr>
+            <!--td - Dados da tabela-->
+                <td>Corpo 1</td>
+
+                <td>Corpo 2</td>
+
+                <td>Corpo 3</td>
+            </tr>
+
+            <tr>
+                <td>Corpo 4</td>
+                
+                <td>Corpo 5</td>
+                
+                <td>Corpo 6</td>
+            </tr>
+
+            <tr>
+                <td>Corpo 7</td>
+
+                <td>Corpo 8</td>
+
+                <td>Corpo 9</td>
+            </tr>
+        </tbody>
+
+    <!--tfoot - Roda pé da tabela-->
+        <tfoot>
+            <tr>
+                <th colspan="2">Total de Dados</th>
+            
+                <td> 9 Dados</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h1>
+        Tabelas responsivas
+    </h1>
+
+    <!--Tabelas responsiva-->
+    <table class="responsive-table">
+        <!--caption - Legenda da tabela-->
+            <caption>Exemplo de Tabelas (caption)</caption>
+    
+        <!--thead - Cabeça da tabela-->
+            <thead>
+            <!--tr - Linha(row) da tabela-->
+                <tr>
+                <!--th - Titulo da linha(row)-->
+                    <th>
+                        Titulo 1
+                    </th>
+    
+                    <th>
+                        Titulo 2
+                    </th>
+    
+                    <th>
+                        Titulo 3
+                    </th>
+                </tr>
+            </thead>
+    
+        <!--tbody - Corpo da tabela-->
+            <tbody>
+                <tr>
+                <!--td - Dados da tabela-->
+                    <td>Corpo 1</td>
+    
+                    <td>Corpo 2</td>
+    
+                    <td>Corpo 3</td>
+                </tr>
+    
+                <tr>
+                    <td>Corpo 4</td>
+                    
+                    <td>Corpo 5</td>
+                    
+                    <td>Corpo 6</td>
+                </tr>
+    
+                <tr>
+                    <td>Corpo 7</td>
+    
+                    <td>Corpo 8</td>
+    
+                    <td>Corpo 9</td>
+                </tr>
+            </tbody>
+    
+        <!--tfoot - Roda pé da tabela-->
+            <tfoot>
+                <tr>
+                    <th colspan="2">Total de Dados</th>
+                
+                    <td> 9 Dados</td>
+                </tr>
+            </tfoot>
+        </table>
+</body>
+</html>
