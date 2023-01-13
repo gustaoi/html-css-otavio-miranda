@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            font-size: 1.5em;
+
+            padding: 0 15px;
+        }
+
+        label {
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Teste de Formulários
+    </h1>
+
+    <form action="#" method="get" target="_blank" autocomplete="off">
+        <p>
+            <label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome" placeholder="Seu Nome" required>
+        </p>
+
+        <p>
+            <label for="idev">Sou um dev</label>
+            <input type="checkbox" name="dev" id="idev" value="sim">
+        </p>
+
+        <p>
+            Gênero: <br>
+            <label for="ifeminino">Feminino</label>
+            <input type="radio" name="sexo" id="ifeminino" checked>
+                <br>
+            <label for="imasculino">Masculino</label>
+            <input type="radio" name="sexo" id="imasculino">
+                <br>
+            <label for="ioutro">Outro</label>
+            <input type="radio" name="sexo" id="ioutro">
+        </p>
+
+        <p>
+            <label for="idata">Date: </label>
+            <input type="date" name="data" id="idata" value="2023-01-13">
+        </p>
+
+        <p>
+            <label for="idatetime">Data e Hora: </label>
+            <input type="datetime-local" name="datetime" id="idatetime" value="2023-01-13T12:00">
+        </p>
+
+        <p>
+            <label for="itime">Time: </label>
+            <input type="time" name="time" id="itime" value="20:00:01">
+        </p>
+
+        <p>
+            <label for="icor">Cor Preferida: </label>
+            <input type="color" name="cor" id="icor" value="#FF0000">
+        </p>
+
+        <p>
+            <label for="iemail">Seu Email: </label>
+            <input type="email" name="email" id="iemail" placeholder="ex: xxxx@email.com">
+        </p>
+
+        <p>
+            <label for="ipassword">Sua Senha</label>
+            <input type="password" name="password" id="ipasssword">
+        </p>
+
+        <p>
+            <label for="ifoto">Sua Foto: </label>
+            <input type="file" name="foto" id="ifoto" accept=".png, .svg, image/*">
+        </p>
+
+        <p>
+            <label for="inumber">Digite um Número: </label>
+            <input type="number" name="number" id="inumber" placeholder="Digite um número" min="10" max="100" step="5" size="50">
+        </p>
+
+        <p>
+            <label for="irange">Nivel de Satisfação: </label>
+            <input type="range" name="range" id="irange" min="0" max="10" step="1">
+        </p>
+
+        <datalist>
+            <option value=""></option>
+        </datalist>
+
+        <p>
+            <label for="iurl">Sua url: </label>
+            <input type="url" name="url" id="iurl" placeholder="URL">
+        </p>
+
+        <p>
+            <label for="ibusca">Busca</label>
+            <input type="search" name="busca" id="ibusca">
+        </p>
+
+        <p>
+            <label for="iselect">Selecione: </label>
+            <select name="seelect" id="iselect">
+                <option value="qualquer">Valor 1</option>
+                <option value="qualquer">Valor 2</option>
+                <option value="qualquer">Valor 3</option>
+                <option value="qualquer">Valor 4</option>
+            </select>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="resete">
+        </p>
+    </form>
+
+</body>
+</html>
