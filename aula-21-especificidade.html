@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidade</title>
+    <style>
+        body {
+            background-color: lightgray;
+
+            font-size: 1.5em;
+        }
+        
+        p {
+            width: 800px;
+
+            padding: 35px;
+
+            border-radius: 30px;
+        }
+
+/* Os elementos com 
+ID      Classes, atributos e pseudo-classes   Elementos
+1       0                                     0
+0       1                                     0
+1       1                                     1
+*/
+
+        p#ip {
+            background-color: red;
+        }
+
+        .p {
+            background-color: yellow;
+        }
+
+        #ip.p {
+            background-color: lightcoral;
+        }
+
+        p#ip.p {
+            background-color: lightgreen;
+        }
+
+        #b p#ip.p {
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+<body id="b">
+    <h1>
+        Especificidade de Elementos
+    </h1>
+
+    <p id="ip" class="p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum blanditiis, eaque harum inventore porro totam repellendus natus minus dolorum cumque accusantium quasi quibusdam ipsum aliquid dolores magni cum rem consequatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis rerum dolorum, ipsum nostrum suscipit quae doloremque maiores quisquam atque totam libero voluptate soluta distinctio alias, minus, repudiandae maxime nobis. Animi.
+    </p>
+</body>
+</html>
