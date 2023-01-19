@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança no css</title>
+
+    <style>
+        body {
+            /* Visual */
+            color: red;
+
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 2em;
+        }
+
+        .texto {
+            color: darkviolet;
+        }
+
+        .p-texto {
+            color: initial; /* initial - serve para ele usar sua configuração padrão */
+            font-size: inherit; /* inherit - serve para ele herdar as config do css */
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur officiis sequi voluptas veritatis corporis cupiditate pariatur, placeat at neque suscipit quisquam ad perferendis repudiandae velit amet iusto laboriosam necessitatibus? Aut?
+    </p>
+
+    <div class="texto">
+        <h1>
+            inheritance in css
+        </h1>
+        <p class="p-texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quibusdam sed vitae quo temporibus dignissimos nostrum eos iste, nihil accusamus dolorem ullam expedita? Fuga, provident atque? Inventore officiis reprehenderit quasi.
+        </p>
+    </div>
+</body>
+</html>
