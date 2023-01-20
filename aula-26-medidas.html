@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidade de Medidas</title>
+</head>
+
+<style>
+    html {
+        font-size: 15px;
+
+/* Trabalhando de melhor maneira com (rem) / 100% = 16px
+        
+        font-size: 62.5%; - 62.5% de 16px é 10px
+*/
+
+/* Tipos de scrool */
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        margin: 20px;
+    }
+
+    a {
+        /* Structure */
+        margin-right: 50px;
+        /* Visual */
+        text-decoration: none;
+
+        font-size: 1.5rem;
+        font-weight: 500;
+
+        color: darkblue;
+    }
+
+    a:hover {
+        color: red;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    section {
+        margin: 0 10px;
+
+        padding: 10px 0;
+    }
+
+    .px p {
+        font-size: 25px;
+    }
+
+/* Elemento mais proximo pro (em) */
+    .em {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+/* Se baseia no Elemento mais proximo */
+    p {
+        font-size: 2em;
+    }
+
+    .rem p {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .wrem {
+        width: 50rem;
+        height: 40rem;
+
+        margin-bottom: 20px;
+
+        /* Visual */
+        background-color: lightcoral;
+    }
+
+    .vw {
+        width: 90vw;
+        height:  90vh;
+
+        /* Visual */
+        background-color: lightblue;
+    }
+
+/* Porcentagem */
+    .porcent {
+        /* Structure */
+        width: 90vw;
+        height: 90vh;
+        
+        margin-top: 20px;
+
+        padding: 0;
+
+        /* Visual */
+        background-color: lightgreen;
+    }
+
+    .filho {
+        width: 50%; /* 50% - da width do pai que é = 90% da página */
+        height: 100%;
+
+
+        /* Visual */
+        background-color: lightgrey;
+    }
+
+    .filho h2 {
+        margin-top: 0;
+    }
+
+</style>
+<body>
+    <h1>
+        Treinando Unidades de Medidas
+    </h1>
+
+<!-- Links de âncora -->
+    <a href="#wrem">ir paraUnidade wrem</a>
+    <a href="#vw">ir para Unidades vw and vh</a>
+    <a href="#porcent">ir para Unidade %</a>
+
+    <section class="px">
+        <h2>
+            Teste px (25px)
+        </h2>
+
+        <p>
+            <strong>O elemento de medida pixel(px) é uma medida absoluta. onde não pode ser alterada por outras medidas.</strong>  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur laborum nulla eni Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus,
+        </p>
+    </section>
+
+    <section class="em">
+        <h2>
+            Teste em (12px 2em = 24px)
+        </h2>
+
+        <p>
+            A unidade (em) é uma unidade Relativa onde o tamanho dela se baseia na unidade de medida pai mais proximo mutiplicando-a (12px(unidade pai) - 2em(unidade de medida filho) - 12 x 2 = 24px)
+    </section>
+
+    <section class="rem">
+        <h2>
+            Teste rem (root(15px) / rem(2rem) = 30px)
+        </h2>
+
+        <p>
+            A unidade (rem) é igual ao (em) porém é relativa a root(raiz) da página e não ao pai mais proximo. (root(15px) / rem(2rem) - 15 x 2 = 30px)
+        </p>
+    </section>
+
+    <section class="wrem" id="wrem">
+        <h2>
+            Teste rem com width (62.5%(10px) 50rem = 500px)
+        </h2>
+
+        <p>
+            Unidades de medidas serve para TUDO 
+        </p>
+    </section>
+
+    <section class="vw" id="vw">
+        <h2>
+            Teste com vw e vh (50vw ou vh = 50% da página)
+        </h2>
+
+        <p>
+            A unidade vw(view-port) e vh(view-heigth) é relativo a largura e altura da area visivel do pai mais proximo do elemento da página 
+        </p>
+    </section>
+
+    <section class="porcent" id="porcent">
+        <div class="filho">
+            <h2>
+                Teste com Porcentagem(%)
+            </h2>
+            <p>
+                A unidade % é ralativo ao pai mais proximo (90vw(pai) and 50%(filho) = metade da 90vw)
+            </p>
+
+            <p>
+                Esse filho tem 50% de largura e 100% de altura
+            </p>
+        </div>
+    </section>
+        
+</body>
+</html>
