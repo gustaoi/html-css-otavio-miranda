@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    /* Structure */
+    height: 100%;
+
+    /* Visual */
+    background-color: bisque;
+}
+
+.text-center {
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    justify-content: center;
+}
+
+.info-1, .info-2, .info-3, .info-4, .info-5 {
+    /* Structure */
+    width: 300px;
+    height: 300px;
+
+    margin: 10px;
+    /* Visual */
+    background-color: lightcoral;
+
+    border: 1.5px solid black;
+}
+
+.info-1 {
+    /* Structure */
+    position: absolute;
+
+    /* centralizando com absolute */
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-40%);
+
+/* 
+ou se vc souber a largura e altura o conteúdo use a metade em margin-top / margin-left
+ */
+
+    z-index: 0;
+    /* Visual */
+    
+}
+
+.info-2 {
+    /* Structure */
+    float: left;
+
+    /* Visual */
+    background-color: lightblue;
+
+    border: 1.5px solid black;
+}
+
+.info-3 {
+    margin: 0 auto 0 542px;
+
+    position: relative;
+
+    /* Visual */
+    background-color: lightgreen;
+}
+
+.info-4 {
+    /* Structure */
+/* Position relative - habilita as funções em relação a ele mesmo */
+    position: relative; 
+
+    top: 100px;
+
+    left: 100px;
+
+    /* Visual */
+    background-color: lightsalmon;
+}
+
+/* A div.absolute ele respeita a relative dp pai, por isso não sai de dentro do elemento */
+.absolute {
+    /* Structure */
+    padding: 3px;
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    /* Visual */
+    background-color: darkcyan;
+}
+
+.info-5 {
+    /* Structure */
+    position: fixed;
+
+    left: 75%;
+    top: 50%;
+    /* Visual */
+    background-color: lightslategray;
+}
+
+ul {
+    height: 200px;
+    width: 500px;
+
+    overflow-y: auto;
+}
+
+ul li.sticky {
+    position: sticky;
+
+    top: 0;
+
+    background-color: gray;
+    color: white;
+
+    list-style: none;
+
+    font-size: 22px;
+}
+
+p {
+    margin: 10px 0;
+}
