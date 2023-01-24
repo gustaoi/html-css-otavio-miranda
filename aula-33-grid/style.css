@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+}
+
+.text-center {
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    justify-content: center;
+}
+
+.grid {
+    /* Structure */
+    display: grid;
+
+    width: calc(100vw - 20px);
+    height: 200vh;
+
+    padding: 10px;
+
+    /* fr - equivale a 33% da largura total um fragmento */
+
+    /* grid-template-columns: 33% 1fr 1fr; divide os elementos em duas ou mais colunas colunas */
+
+    /* Repetir os fragmentos */
+    grid-template-columns: repeat(3, 1fr);
+
+    /* grid em linha */
+    grid-template-rows: repeat(7, 1fr 2fr);
+
+    gap: 20px;
+
+    /* Visual */
+    background-color: rgb(172, 172, 172);
+}
+
+.grid div {
+    /* Structure */
+    /* width: 100px; */
+
+    /* height: 100vh; */
+    /* Visual */
+    background-color: lightcoral;
+
+    border: 1.5px solid black;
+}
+
+.grid div:nth-child(5) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    /* 
+    Ou por span
+    grid-row: span 2;
+    grid-column: span 3; 
+    */
+
+    /* Visual */
+    background-color: lightskyblue;
+}
+
+.grid div:nth-child(9),
+.grid div:nth-child(8) {
+    /* Structure */
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+
+    /* Visual */
+    background-color: lightgreen;
+}
