@@ -1,0 +1,249 @@
+@charset "UTF-8";
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif; 
+*/
+
+/* default settings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Text */
+    --title: 'Montserrat', sans-serif;
+    --text: 'Open Sans', sans-serif;
+
+    /* Color / Background */
+    --main-bg: url(../img/main-bg.svg);
+    --bg-white: white;
+
+    --text-color-w: white;
+    --text-color-b: black;
+
+    --light-gray-color: #EEEEEE;
+    --border-a-color: crimson;
+}
+
+html {
+    font-size: 62.5%; /* 10px */
+}
+
+body {
+    /* Structure */
+
+    /* Visual */
+    font-family: var(--text);
+    font-size: 1.6rem; /* 16px */
+}
+
+/* Title settings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title);
+}
+
+h1 {
+
+    /* Visual */
+    font-size: 6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h2 {
+
+    /* Visual */
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h3 {
+
+    /* Visual */
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h4 {
+
+    /* Visual */
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h5 {
+
+    /* Visual */
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.section-bg {
+    /* Structure */
+
+    /* Visual */
+    background: var(--main-bg);
+    background-size: cover;
+    background-position: center center;
+
+    color: var(--text-color-w);
+}
+
+.section-white-bg {
+    background-color: var(--bg-white);
+}
+
+.content-center {
+    /* Structure */
+    max-width: 120rem; /* 1200px */
+
+    margin: 0 auto;
+}
+
+.view-section {
+    min-height: calc(100vh - 57px);
+}
+
+/* ---------- Default settings end ---------- */
+
+
+/* Starting page style */
+
+
+.menu {
+    /* Structure */
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding-bottom: 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+    
+    /* Visual */
+    background-color: var(--bg-white);
+
+    border-bottom: .1rem solid var(--light-gray-color);
+}
+
+.menu > a {
+    /* Structure */
+    margin: 12px 0;
+    /* Visual */
+    text-decoration: none;
+
+    font-family: var(--title);
+    font-size: 2.7rem;
+    font-weight: 800;
+
+    color: var(--text-color-b);
+}
+
+.nav ul {
+    /* Structure */
+    display: flex;
+
+    gap: 2.5rem; /* 25px */
+
+    margin-right: 3rem;
+    /* Visual */
+    list-style: none;
+}
+
+.nav ul li a {
+    /* Structure */
+    position: relative;
+    /* Visual */
+    text-decoration: none;
+
+    font-family: var(--title);
+    font-size: 1.7rem;
+    font-weight: 500;
+
+    color: var(--text-color-b);
+}
+
+.nav ul li a::after {
+    /* Structure */
+    content: '';
+
+    position: absolute;
+
+    bottom: -.4rem;
+    left: 40%;
+
+    width: 0;
+    height: 0.2rem;
+
+    /* Visual */
+    background-color: var(--border-a-color);
+
+    transition: all 300ms ease-in-out;
+}
+
+.nav ul li a:hover::after {
+    width: 60%;
+
+    left: 20%;
+}
+
+.menu-spacing {
+    height: 58px;
+}
+
+/* Starting main contents */
+.main-intro {
+    /* Structure */
+    padding: 40px;
+
+    height: calc(100vh - 57px - 80px);
+
+    display: grid;
+
+    justify-content: center;
+    align-items: center;
+
+    grid-template-columns: 1fr 1.5fr;
+
+    gap: 5rem;
+
+    /* Visual */
+}
+
+.text-intro {
+    /* Structure */
+
+    display: flex;
+
+    flex-flow: column wrap;
+    /* Visual */
+}
+
+.text-intro h1 {
+    /* Structure */
+    margin-bottom: 3rem;
+
+    /* Visual */
+    font-size: 5rem;
+}
+
+.text-intro p {
+
+    /* Visual */
+    text-align: justify;
+    line-height: 2.7rem;
+}
