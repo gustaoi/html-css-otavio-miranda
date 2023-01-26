@@ -117,6 +117,14 @@ h5 {
 
 /* Starting page style */
 
+aside {
+    width: 100%;
+    height: 58px;
+
+    background-color: var(--bg-white);
+
+    position: fixed;
+}
 
 .menu {
     /* Structure */
@@ -217,33 +225,57 @@ h5 {
     justify-content: center;
     align-items: center;
 
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: .8fr 1.5fr;
 
-    gap: 5rem;
+    gap: 6rem;
 
     /* Visual */
 }
 
 .text-intro {
     /* Structure */
-
     display: flex;
 
     flex-flow: column wrap;
+    
+    justify-content: center;
+
+    padding: 20px;
     /* Visual */
+    background-color: rgba(0, 0, 0, 0.151);
 }
 
 .text-intro h1 {
     /* Structure */
     margin-bottom: 3rem;
 
+    line-height: 6rem;
+
     /* Visual */
     font-size: 5rem;
+    font-weight: 600;
 }
 
 .text-intro p {
 
     /* Visual */
-    text-align: justify;
-    line-height: 2.7rem;
+    text-align: left;
+    line-height: 2.8rem;
+}
+
+.img-intro {
+    display: flex;
+
+    flex-flow: column wrap;
+    
+    justify-content: center;
+}
+
+.img-intro img {
+    /* Struture */
+    max-width: 100%;
+
+    height: auto;
+    
+    /* Visual */
 }
