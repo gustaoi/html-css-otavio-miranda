@@ -31,6 +31,8 @@ font-family: 'Open Sans', sans-serif;
 
 html {
     font-size: 62.5%; /* 10px */
+
+    scroll-behavior: smooth;
 }
 
 body {
@@ -115,7 +117,7 @@ h5 {
 /* ---------- Default settings end ---------- */
 
 
-/* Starting page style */
+/* ----- Starting page style ----- */
 
 aside {
     width: 100%;
@@ -214,11 +216,14 @@ aside {
 }
 
 /* Starting main contents */
+
+/* ------- INTRO ------- */
+
 .main-intro {
     /* Structure */
     padding: 40px;
 
-    height: calc(100vh - 57px - 80px);
+    min-height: calc(100vh - 57px - 80px);
 
     display: grid;
 
@@ -234,6 +239,7 @@ aside {
 
 .text-intro {
     /* Structure */
+    min-height: auto;
     display: flex;
 
     flex-flow: column wrap;
@@ -249,7 +255,7 @@ aside {
     /* Structure */
     margin-bottom: 3rem;
 
-    line-height: 6rem;
+    line-height: 5.5rem;
 
     /* Visual */
     font-size: 5rem;
@@ -275,7 +281,136 @@ aside {
     /* Struture */
     max-width: 100%;
 
-    height: auto;
+    min-height: auto;
     
     /* Visual */
+}
+
+/* ------- INTRO END -------- */
+
+/* ------- BEGIN TOP3 -------- */
+
+.top3 {
+    /* Structure */
+    padding: 30px;
+
+    min-height: calc(100vh - 60px - 57px);
+    /* Visual */
+}
+
+.text-top3 {
+    /* Structure */
+    min-height: 100%;
+    min-width: 100%;
+
+    display: flex;
+
+    flex-flow: column wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+    /* Visual */
+}
+
+.text-top3 p {
+    /* Structure */
+    max-width: 55rem;
+
+    /* Visual */
+    font-family: var(--text);
+    font-size: 1.7rem;
+
+    line-height: 2.3rem;
+
+    text-align: center;
+}
+
+/* ----- TOP3 END ----- */
+
+
+/* ----- BEGIN GRID ----- */
+
+.grid-one-content {
+    /* Structure */
+    padding: 20px;
+
+    min-height: calc(100vh - 57px - 40px);
+    width: calc(100% - 40px);
+
+    display: flex;
+
+    flex-flow: column wrap;
+
+    justify-content: center;
+
+    gap: 50px;
+
+    
+    /* Visual */
+}
+
+.text-grid {
+    /* Structure */
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.grid-one {
+    /* Structure */
+    width: 100%;
+
+    padding-top: 20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+
+    overflow-x: auto;
+    /* --- Contador --- */
+    counter-reset: grid-counter;
+
+    /* Visual */
+    text-align: justify;
+}
+
+.grid-one h3 {
+    /* Structure */
+    position: relative;
+
+    padding-left: 5.3rem;
+
+    padding-bottom: 1.5rem;
+
+    /* Visual */
+    font-size: 3.5rem;
+}
+
+.grid-one h3::before {
+    /* ---- Contador ---- */
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+
+    position: absolute;
+
+    top: -2.5rem;
+    left: -.3rem;
+
+    /* Visual */
+    font-family: var(--title);
+    font-size: 6.5rem;
+    font-style: italic;
+    font-weight: bolder;
+
+    /* --- Rotacionando Elementos --- */
+    transform: rotate(5deg);
+}
+
+.grid-p {
+
+    /* Visual */
+    width: 35rem;
 }
