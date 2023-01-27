@@ -126,6 +126,8 @@ aside {
     background-color: var(--bg-white);
 
     position: fixed;
+
+    z-index: 1;
 }
 
 .menu {
@@ -413,4 +415,42 @@ aside {
 
     /* Visual */
     width: 35rem;
+}
+
+/* ----- TOP3 FINISHED ----- */
+
+
+/* ----- BEGIN GALLERY ----- */
+
+.gallery-content {
+    /* Structure */
+    padding: 20px;
+}
+
+.grid-two {
+    /* Structure */
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 3rem;
+}
+
+.gallery-img {
+    /* Structure */
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+
+    overflow: hidden;
+}
+
+.gallery-img img {
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
 }
