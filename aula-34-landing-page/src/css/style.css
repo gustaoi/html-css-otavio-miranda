@@ -476,6 +476,8 @@ aside {
 
     grid-template-columns: repeat(3, 1fr);
 
+    flex-wrap: wrap;
+
     gap: 3rem;
 }
 
@@ -626,4 +628,13 @@ footer {
     color: white;
 
     border: black;
+}
+
+
+/* ------ BEGIN MEDIA QUERIES ------ */
+
+@media (max-width: 800px) {
+    .main-intro {
+        grid-template-columns: 1fr;
+    }
 }
