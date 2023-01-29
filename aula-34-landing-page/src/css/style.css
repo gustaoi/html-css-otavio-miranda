@@ -636,5 +636,5 @@ footer {
 @media (max-width: 800px) {
     .main-intro {
         grid-template-columns: 1fr;
-    }
+    }     
 }
